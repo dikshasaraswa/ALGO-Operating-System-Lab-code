@@ -2,16 +2,15 @@
 #include <vector>
 #include <queue>
 #include <limits.h>
+
 using namespace std;
 
 class Solution {
 public:
-    // Function to find the shortest distance of all the vertices
-    // from the source vertex S.
+    // Function to find the shortest distance of all the vertices from the source vertex S.
     vector<int> dijkstra(int V, vector<vector<int> > adj[], int S) {
         // Priority queue to store (distance, node)
         priority_queue<pair<int, int>, vector<pair<int, int> >, greater<pair<int, int> > > pq;
-        
         vector<int> dist(V, INT_MAX); // Distance vector initialized with a large value
         dist[S] = 0;
         pq.push(make_pair(0, S));
@@ -36,15 +35,23 @@ public:
     }
 };
 
-
 int main() {
     int t;
+    cout << "Enter the number of test cases: ";
     cin >> t;
+    
     while (t--) {
         int V, E;
-        cin >> V >> E;
+        cout << "Enter the number of vertices: ";
+        cin >> V;
+        cout << "Enter the number of edges: ";
+        cin >> E;
+        
+        // Initialize adjacency list
         vector<vector<int> > adj[V];
         
+        // Read edges
+        cout << "Enter the edges (format: u v w) where u and v are vertices and w is the weight:\n";
         for (int i = 0; i < E; i++) {
             int u, v, w;
             cin >> u >> v >> w;
@@ -59,15 +66,22 @@ int main() {
         }
         
         int S;
+        cout << "Enter the source vertex: ";
         cin >> S;
+        
+        // Call Dijkstra's algorithm
         Solution obj;
         vector<int> res = obj.dijkstra(V, adj, S);
         
+        // Display results
+        cout << "Shortest distances from source vertex " << S << ":\n";
         for (int i = 0; i < V; i++) {
-            cout << res[i] << " ";
+            cout << "Vertex " << i << ": " << res[i] << endl;
         }
         cout << endl;
     }
+    
     return 0;
 }
+
 
