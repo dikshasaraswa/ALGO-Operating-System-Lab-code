@@ -59,6 +59,8 @@ int main() {
             edge1.push_back(v);
             edge1.push_back(w);
             adj[u].push_back(edge1);
+
+           // to add the reverse edge for the undirected graph:
             vector<int> edge2;
             edge2.push_back(u);
             edge2.push_back(w);
