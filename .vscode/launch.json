@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/dikshasaraswat/Desktop/ALGO & Operating system lab /ALGO-Operating-System-Lab-code",
+      "program": "/Users/dikshasaraswat/Desktop/ALGO & Operating system lab /ALGO-Operating-System-Lab-code/build/Debug/outDebug"
+    }
+  ]
+}
