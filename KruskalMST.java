@@ -35,18 +35,48 @@ class DisjointSet {
 class Solution {
     public int kruskalMST(int V, List<int[]> edges) {
         DisjointSet ds = new DisjointSet(V);
-        edges.sort(Comparator.comparingInt(a -> a[0])); // Sort edges by weight
-        int mstWt = 0;
+        
+        // Sort edges by weight
+        System.out.println("Sorting edges by weight...");
+        edges.sort(Comparator.comparingInt(a -> a[0]));
+        for (int[] edge : edges) {
+            System.out.println("Edge: " + edge[1] + " - " + edge[2] + " with weight: " + edge[0]);
+        }
 
+        int mstWt = 0;
+        List<int[]> mstEdges = new ArrayList<>();
+
+        System.out.println("\nProcessing edges...");
         for (int[] edge : edges) {
             int wt = edge[0];
             int u = edge[1];
             int v = edge[2];
-            if (ds.findUPar(u) != ds.findUPar(v)) {
+            
+            // Find the ultimate parent of u and v
+            int parentU = ds.findUPar(u);
+            int parentV = ds.findUPar(v);
+            System.out.println("Considering edge " + u + " - " + v + " with weight: " + wt);
+            System.out.println("Parent of " + u + " is " + parentU);
+            System.out.println("Parent of " + v + " is " + parentV);
+            
+            // If parents are different, include this edge in the MST
+            if (parentU != parentV) {
+                System.out.println("Edge " + u + " - " + v + " will be included in the MST.");
                 mstWt += wt;
                 ds.unionBySize(u, v);
+                mstEdges.add(new int[]{u, v, wt});  // Add this edge to the MST list
+            } else {
+                System.out.println("Edge " + u + " - " + v + " creates a cycle and is skipped.");
             }
+            System.out.println();
         }
+        
+        // Print the MST
+        System.out.println("The edges in the Minimum Spanning Tree are:");
+        for (int[] mstEdge : mstEdges) {
+            System.out.println("Edge: " + mstEdge[0] + " - " + mstEdge[1] + " with weight: " + mstEdge[2]);
+        }
+
         return mstWt;
     }
 }
@@ -77,3 +107,4 @@ public class KruskalMST {
         sc.close();
     }
 }
+
