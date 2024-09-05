@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "DFS",
+      "request": "launch",
+      "mainClass": "DFS",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "lldb",
       "request": "launch",
