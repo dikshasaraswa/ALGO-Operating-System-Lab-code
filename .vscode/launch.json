@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LCSWithGUI",
+      "request": "launch",
+      "mainClass": "LCSWithGUI",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
       "name": "DFS",
       "request": "launch",
       "mainClass": "DFS",
