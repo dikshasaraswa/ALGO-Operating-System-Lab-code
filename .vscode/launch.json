@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BankersAlgorithmWithTable",
+      "request": "launch",
+      "mainClass": "BankersAlgorithmWithTable",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
+      "name": "BankersAlgorithmInputGUI",
+      "request": "launch",
+      "mainClass": "BankersAlgorithmInputGUI",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
+      "name": "BankersAlgorithm",
+      "request": "launch",
+      "mainClass": "BankersAlgorithm",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
+      "name": "BankersAlgorithmWithGanttChart",
+      "request": "launch",
+      "mainClass": "BankersAlgorithmWithGanttChart",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
+      "name": "BankersAlgorithmGUI",
+      "request": "launch",
+      "mainClass": "BankersAlgorithmGUI",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
       "name": "LCS",
       "request": "launch",
       "mainClass": "LCS",
