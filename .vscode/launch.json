@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DiskSchedulingGUI",
+      "request": "launch",
+      "mainClass": "DiskSchedulingGUI",
+      "projectName": "ALGO-Operating-System-Lab-code_e1a0d4e4"
+    },
+    {
+      "type": "java",
       "name": "BankersAlgorithmWithTable",
       "request": "launch",
       "mainClass": "BankersAlgorithmWithTable",

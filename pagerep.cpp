@@ -29,7 +29,7 @@ void printTableRow(int page, string action, const vector<int>& frames, int capac
     }
 
     cout << setw(12) << (pageFault ? "Yes" : "No") 
-         << (replacedPage != -1 ? to_string(replacedPage) : "--") << endl;
+         << setw(15) << (replacedPage != -1 ? to_string(replacedPage) : "--") << endl;
 }
 
 int optPageFaults(const vector<int>& pages, int capacity, int &pageHits) {
@@ -160,7 +160,7 @@ int main() {
     cout << "-----------------------\n";
     cout << left << setw(30) << "Algorithm" 
          << setw(10) << "Page Faults" 
-         << "Page Hits" << endl;
+         << "   Page Hits" << endl;
     cout << left << setw(30) << "Optimal (OPT)" 
          << setw(10) << optFaults 
          << optHits << endl;
